@@ -1,0 +1,219 @@
+@import "variables";
+
+// ################### NAVBAR #####################
+
+ul.topnav {
+  align-items: center;
+  background-color: $nav-background-color;
+  color: $nav-anchor-color;
+  display: flex;
+  font-size: $nav-font-size;
+  height: $nav-height;
+  justify-content: space-around;
+  opacity: $opacity;
+  li {
+    list-style: none;
+    a {
+      color: $nav-anchor-color;
+      text-decoration: none;
+    }
+  }
+}
+
+ul.topnav {
+  li.dropdownIcon {
+    display: none;
+  }
+}
+
+// ################### Menu #####################
+.menu {
+  background-image: url('../images/bg-gray-in.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  h2 {
+    font-family: 'Courgette';
+    font-weight: 600;
+    text-align: center;
+  }
+  p {
+    font-family: 'Courgette';
+    text-align: center;
+  }
+}
+
+.side-img {
+    display: inline-block;
+    height: 14px;
+    width: 75px;
+}
+
+.side-img.left-side-img i:first-child, .side-img.left-side-img i:last-child {
+    margin: 0 0 1px 10px;
+    width: 65px;
+}
+.side-img i:first-child, .side-img i:last-child {
+    width: 65px;
+}
+.side-img i {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #B71C1C -moz-use-text-color -moz-use-text-color;
+    border-image: none;
+    border-style: solid none none;
+    border-width: 1px 0 0;
+    box-sizing: content-box;
+    display: inline-block;
+    float: left;
+    height: 1px;
+    margin: 0 0 1px;
+    width: 75px;
+}
+.side-img i:first-child, .side-img i:last-child {
+    width: 65px;
+}
+
+.menu-portion {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: $nav-padding;
+  .menu-left img {
+    max-width: 600px;
+  }
+  .menu-text {
+    line-height: $menu-line-height;
+    p {
+      margin-top: $menu-margin-top;
+      text-align: left;
+    }
+  }
+  .menu-btn button {
+    width: 100%;
+  }
+}
+
+// ################### Menu #####################
+
+.about {
+  h2 {
+    margin-top: $menu-margin-top;
+    text-align: center;
+  }
+  p {
+    text-align: center;
+  }
+  .about-items {
+    display: flex;
+    justify-content: space-around;
+  }
+  div {
+    margin: $nav-margin;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+// ################### MOBILE #####################
+
+@media only screen and (max-width: 320px) {
+  ul.topnav {
+    align-items: center;
+    li:not(:nth-child(1)) {
+      display: none;
+    }
+    li.logo {
+      margin: 0 auto;
+    }
+    li.dropdownIcon {
+      display: block;
+      padding-right: $nav-padding;
+    }
+  }
+
+  ul.responsive {
+    background-color: $nav-background-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    opacity: $opacity;
+    position: relative;
+    li {
+       display: inline;
+       list-style: none;
+       float: none;
+       a {
+           color: $nav-anchor-color;
+           display: block;
+           font-size: $nav-font-size;
+           margin-bottom: $nav-margin;
+           padding-top: $nav-padding;
+           text-decoration: none;
+         }
+     }
+  }
+
+  ul.responsive li.dropdownIcon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: $nav-padding;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  ul.topnav {
+    align-items: center;
+    li:not(:nth-child(1)) {
+      display: none;
+    }
+    li.logo {
+      margin: 0 auto;
+    }
+    li.dropdownIcon {
+      display: block;
+      padding-right: $nav-padding;
+    }
+  }
+
+  ul.responsive {
+    background-color: $nav-background-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    opacity: $opacity;
+    position: relative;
+    li {
+       display: inline;
+       list-style: none;
+       float: none;
+       a {
+           color: $nav-anchor-color;
+           display: block;
+           font-size: $nav-font-size;
+           margin-bottom: $nav-margin;
+           padding-top: $nav-padding;
+           text-decoration: none;
+         }
+     }
+  }
+
+  ul.responsive li.dropdownIcon {
+    padding-right: $nav-padding;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .menu-portion {
+    flex-direction: column;
+    .menu-left {
+      margin-bottom: $nav-margin;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
