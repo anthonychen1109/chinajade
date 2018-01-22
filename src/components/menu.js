@@ -2,7 +2,7 @@ import React from 'react';
 
 const Menu = () => {
   return (
-    <div className="menu">
+    <div id="menu" className="menu">
       <h2>
         <span className="side-img left-side-img"><i></i><i></i><i></i></span>
 					Menu

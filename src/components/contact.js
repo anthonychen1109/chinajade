@@ -2,7 +2,7 @@ import React from 'react';
 
 const Contact = () => {
   return (
-    <div className="contact">
+    <div id="contact" className="contact">
       <h2>
         <span className="side-img left-side-img"><i></i><i></i><i></i></span>
 					Contact Us
@@ -17,8 +17,8 @@ const Contact = () => {
           <div className="contact-text">
             <p className="contact-title"><em>Contact Details</em></p>
             <p>Thank you for visiting our website.</p>
-            <p>&#127968; <span>12203 E .ILIFF Avenue. #D.Aurora,CO 80014</span></p>
-            <p>&#9742; <span>303-755-8518</span></p>
+            <p><span role="img">&#127968;</span> <span>12203 E .ILIFF Avenue. #D.Aurora,CO 80014</span></p>
+            <p><span role="img">&#9742;</span> <span>303-755-8518</span></p>
           </div>
 
           <div className="contact-image">
