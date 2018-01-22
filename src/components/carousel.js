@@ -10,14 +10,11 @@ const Carousel = () => {
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
         <div className="carousel-inner" role="listbox">
-          <div className="carousel-item active">
-            <img className="d-block img-fluid" src={require('../static/images/image1.jpg')} alt="First slide" />
+          <div className="carousel-item carousel-item-1 active">
           </div>
-          <div className="carousel-item">
-            <img className="d-block img-fluid" src={require('../static/images/image2.jpg')} alt="Second slide" />
+          <div className="carousel-item carousel-item-2">
           </div>
-          <div className="carousel-item">
-            <img className="d-block img-fluid" src={require('../static/images/image3.jpg')} alt="Third slide" />
+          <div className="carousel-item carousel-item-3">
           </div>
         </div>
         <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
