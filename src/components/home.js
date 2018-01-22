@@ -7,6 +7,7 @@ import Navbar from '../containers/navbar';
 import Menu from './menu';
 import About from './about';
 import Hours from './hours';
+import Contact from './contact';
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <Menu />
       <About />
       <Hours />
+      <Contact />
     </div>
   )
 }

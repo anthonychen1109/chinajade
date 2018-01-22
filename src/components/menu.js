@@ -13,7 +13,7 @@ const Menu = () => {
       </p>
       <div className="menu-portion">
         <div className="menu-left container">
-          <img src={require('../static/images/image3.jpg')} alt="food-pic" />
+          <img src={require('../static/images/1.jpg')} alt="food-pic" />
         </div>
         <div className="menu-right container">
           <div className="menu-btn">
