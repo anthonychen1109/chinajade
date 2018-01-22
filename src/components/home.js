@@ -6,6 +6,7 @@ import Navbar from '../containers/navbar';
 // COMPONENTS
 import Menu from './menu';
 import About from './about';
+import Hours from './hours';
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Navbar />
       <Menu />
       <About />
+      <Hours />
     </div>
   )
 }
