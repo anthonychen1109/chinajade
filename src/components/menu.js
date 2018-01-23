@@ -11,7 +11,7 @@ const Menu = () => {
       <p>
         Food Made to Please
       </p>
-      <div className="menu-portion">
+      <div className="menu-portion container">
         <div className="menu-left container">
           <img src={require('../static/images/1.jpg')} alt="food-pic" />
         </div>

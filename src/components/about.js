@@ -12,7 +12,7 @@ const About = () => {
       <p>
         Everything to make your day go right.
       </p>
-      <div className="about-items">
+      <div className="about-items container">
         <div className="about-1">
           <div>
             <span><p>Amazing Food</p></span>

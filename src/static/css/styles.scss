@@ -152,7 +152,7 @@ ul.topnav {
     justify-content: space-around;
   }
   div {
-    margin: $about-margin;
+    margin: 0 auto;
   }
   img {
     width: 100%;
@@ -162,6 +162,7 @@ ul.topnav {
 .about-1, .about-2 {
   display: block;
   div {
+    margin: 10px;
     overflow: hidden;
     position: relative;
   }

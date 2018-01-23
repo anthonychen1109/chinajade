@@ -118,13 +118,14 @@ ul.topnav li.dropdownIcon {
   display: flex;
   justify-content: space-around; }
 .about div {
-  margin: 10px; }
+  margin: 0 auto; }
 .about img {
   width: 100%; }
 
 .about-1, .about-2 {
   display: block; }
   .about-1 div, .about-2 div {
+    margin: 10px;
     overflow: hidden;
     position: relative; }
   .about-1 span, .about-2 span {
