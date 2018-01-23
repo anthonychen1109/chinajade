@@ -3,6 +3,9 @@
 hr {
   border: 1px dashed;
 }
+p {
+  font-family: 'Open Sans',sans-serif;
+}
 // ################### NAVBAR #####################
 
 ul.topnav {
@@ -14,6 +17,10 @@ ul.topnav {
   height: $nav-height;
   justify-content: space-around;
   opacity: $opacity;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
   li {
     list-style: none;
     a {
@@ -29,7 +36,30 @@ ul.topnav {
   }
 }
 
-// ################### Menu #####################
+// ################### CAROUSEL #####################
+.carousel {
+  margin-top: 40px;
+  .carousel-item-1 {
+    background-image: url('../images/image1.jpg');
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 300px;
+  }
+  .carousel-item-2 {
+    background-image: url('../images/image2.jpg');
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 300px;
+  }
+  .carousel-item-3 {
+    background-image: url('../images/image3.jpg');
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 300px;
+  }
+}
+
+// ################### MENU #####################
 .menu {
   background-image: url('../images/bg-gray-in.jpg');
   background-repeat: no-repeat;
@@ -37,18 +67,22 @@ ul.topnav {
   h2 {
     font-family: 'Courgette';
     font-weight: 600;
+    padding-top: $menu-padding-top;
     text-align: center;
   }
   p {
-    font-family: 'Courgette';
     text-align: center;
   }
 }
 
+.menu-portion {
+  padding-top: $menu-padding-top;
+}
+
 .side-img {
     display: inline-block;
-    height: 14px;
-    width: 75px;
+    height: $menu-img-height;
+    width: $menu-img-width;
 }
 
 .side-img.left-side-img i:first-child, .side-img.left-side-img i:last-child {
@@ -81,9 +115,14 @@ ul.topnav {
 .menu-portion {
   display: flex;
   justify-content: space-around;
-  padding-bottom: $nav-padding;
+  padding-bottom: $menu-padding-bot;
+  .menu-left {
+    display: block;
+  }
   .menu-left img {
-    max-width: 600px;
+    height: auto;
+    max-width: 100%;
+    margin: 0 auto;
   }
   .menu-text {
     line-height: $menu-line-height;
@@ -97,11 +136,12 @@ ul.topnav {
   }
 }
 
-// ################### Menu #####################
+// ################### ABOUT #####################
 
 .about {
   h2 {
-    margin-top: $menu-margin-top;
+    font-family: 'Courgette';
+    padding-top: $about-padding-top;
     text-align: center;
   }
   p {
@@ -112,7 +152,7 @@ ul.topnav {
     justify-content: space-around;
   }
   div {
-    margin: $nav-margin;
+    margin: $about-margin;
   }
   img {
     width: 100%;
@@ -121,36 +161,62 @@ ul.topnav {
 
 .about-1, .about-2 {
   display: block;
+  div {
+    overflow: hidden;
+    position: relative;
+  }
   span {
+    position:absolute;
+    bottom:0px;
+    width: 100%;
+    z-index: 9;
     p {
       background-color: $nav-background-color;
       color: $nav-anchor-color;
-      opacity: .8;
-      padding: 5px;
-      position: relative;
+      margin: 0;
+      opacity: $opacity;
+      padding: $about-div-padding;
       bottom: 0;
+    }
+  }
+  img {
+    height: auto;
+    max-width: 100%;
+    transform: scale(1.1);
+    &:hover {
+      transition: .35s;
+      transition-timing-function: ease-in;
+      transform: scale(1);
+      width: 100%;
     }
   }
 }
 
 .about-desc {
-  padding-top: 10px;
+  padding-top: $about-desc-padding;
 }
 
 // ################### HOURS #####################
 .restaurant-hours {
-  background-color: black;
-  opacity: .8;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ), url('../images/bg-1.jpg');
+  // background-image: url('../images/bg-1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: $opacity;
   h2 {
     color: white;
-    padding-top: 10px;
+    font-family: 'Courgette';
+    padding-top: $hours-padding;
     text-align: center;
     text-shadow: 0px 0px 3px black;
   }
 }
 
 .hours {
-  padding: 40px;
+  padding: $hours-padding-top;
   .day-of-week {
     color: red;
   }
@@ -159,6 +225,47 @@ ul.topnav {
     text-align: center;
     text-shadow: 0px 0px 3px black;
   }
+}
+
+// ################### CONTACT #####################
+.contact {
+  background-color: black;
+  h2 {
+    color: $contact-text-color;
+    font-family: 'Courgette';
+    padding-top: $contact-padding-top;
+    text-align: center;
+    text-shadow: 0px 0px 3px black;
+  }
+  p {
+    color: $contact-text-color;
+    text-align: center;
+    text-shadow: 0px 0px 3px black;
+  }
+}
+
+.contact-details {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 40px;
+  .contact-text {
+    p {
+      text-align: left;
+    }
+    .contact-title {
+      color: red;
+    }
+  }
+}
+
+.contact-image {
+  img {
+    max-width: 100%;
+  }
+}
+
+.contact-location {
+  padding-bottom: 40px;
 }
 
 // ################### MOBILE #####################
@@ -211,12 +318,16 @@ ul.topnav {
     flex-direction: column;
   }
 
-  .menu, .about, .restaurant-hours {
+  .menu, .about, .restaurant-hours, .contact {
     h2 {
       span {
         display:none;
       }
     }
+  }
+
+  .contact-details {
+    flex-direction: column;
   }
 
 }
@@ -265,6 +376,10 @@ ul.topnav {
     top: 0;
   }
 
+  .menu-left img {
+    height: auto;
+  }
+
   .menu-portion {
     flex-direction: column;
     .menu-left {
@@ -279,11 +394,57 @@ ul.topnav {
     flex-direction: column;
   }
 
-  .menu, .about, .restaurant-hours {
+  .menu, .about, .restaurant-hours, .contact {
     h2 {
       span {
         display:none;
       }
+    }
+  }
+
+  .contact-details {
+    flex-direction: column;
+  }
+
+}
+
+@media only screen and (max-width: 1024px) {
+  .menu-portion {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: $nav-padding;
+    .menu-left img {
+      height: auto;
+      max-width: 100%;
+    }
+    .menu-text {
+      line-height: $menu-line-height;
+      p {
+        flex-wrap: wrap;
+        margin-top: $menu-margin-top;
+        text-align: left;
+      }
+    }
+    .menu-btn button {
+      width: 100%;
+    }
+  }
+
+  .about-1, .about-2 {
+    display: block;
+    span {
+      p {
+        background-color: $nav-background-color;
+        color: $nav-anchor-color;
+        opacity: $opacity;
+        padding: $about-div-padding;
+        position: relative;
+        bottom: 0;
+      }
+    }
+    img {
+      max-height: 250px;
+      max-width: 100%;
     }
   }
 
