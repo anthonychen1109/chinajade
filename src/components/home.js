@@ -13,8 +13,8 @@ import Contact from './contact';
 const Home = () => {
   return (
     <div>
-      <Carousel />
       <Navbar />
+      <Carousel />
       <Menu />
       <About />
       <Hours />
