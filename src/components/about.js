@@ -23,16 +23,7 @@ const About = () => {
             <p>Whether you're with friends, family or by yourself, we have something for everyone at prices you'll love.</p>
           </div>
         </div>
-        <div className="about-2">
-          <div>
-            <span className="my-style"><p>Simple and Clean</p></span>
-            <img src={require('../static/images/3.jpg')} alt="pic-2"/>
-          </div>
-          <div className="about-desc">
-            <p><strong>Eat and Relax</strong></p>
-            <p>Great place for a family meal, romantic outing, or your lunch break. Eat and relax in a quiet and comfortable environment.</p>
-          </div>
-        </div>
+
       </div>
     </div>
   )

@@ -325,7 +325,6 @@ ul.topnav li.dropdownIcon {
       position: relative;
       bottom: 0; }
     .about-1 img, .about-2 img {
-      max-height: 250px;
       max-width: 100%; } }
 
 /*# sourceMappingURL=styles.css.map */
